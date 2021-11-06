@@ -1,0 +1,49 @@
+@startuml
+Application o-- ApplicationController
+ApplicationController o-- RecordItem
+class Application{
++start(Stage stage)
+
++main(String[] args)
+}
+class ApplicationController{
+-DatePicker date;
+-TableColumn<RecordItem, String> tableDescription;
+-TableColumn<RecordItem, String> tableDueDate;
+-TableColumn<RecordItem, String> tableStatus;
+-TableColumn<RecordItem, String> tableSelect;
+-TableView<RecordItem> table;
+-TextField saveName;
+-TextField savePath;
+-TextField loadPath;
+-TextArea addDescription;
+-ObservableList<RecordItem> items = FXCollections.observableArrayList;
++addItemToListPressed(MouseEvent mouseEvent)
++deleteItemPressed(MouseEvent mouseEvent)
++clearListPressed(MouseEvent mouseEvent)
++dueDateEdit(TableColumn.CellEditEvent<RecordItem, String>recordItemStringCellEditEvent)
++descriptionEdit(TableColumn.CellEditEvent<RecordItem, String>recordItemStringCellEditEvent)
++completePressed(MouseEvent mouseEvent)
++showIncomplete(MouseEvent mouseEvent)
++showComplete(MouseEvent mouseEvent)
++showAllPressed(MouseEvent mouseEvent)
++incompletePressed(MouseEvent mouseEvent)
++initialize()
+
+}
+class RecordItem{
+ private String description;
+ private String dueDate;
+ private String status;
+ private CheckBox select;
++RecordItem(String title, String description, String dueDate, boolean complete, boolean inView)
++getTitle()
++setTitle(String title)
++getDescription()
++setDescription(String description)
++setDueDate(String dueDate)
++getDueDate()
++getSelect()
++setSelect()
+}
+@enduml

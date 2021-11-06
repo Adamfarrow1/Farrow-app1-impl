@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.ApplicationController">
+   <children>
+      <Button layoutX="91.0" layoutY="171.0" mnemonicParsing="false" onMousePressed="#addItemToListPressed" text="Add item to List" />
+      <Button layoutX="424.0" layoutY="538.0" mnemonicParsing="false" onMousePressed="#deleteItemPressed" text="Remove Selected item from list" />
+      <Button layoutX="414.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#showIncomplete" text="Show Incomplete" />
+      <Button layoutX="272.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#showComplete" text="Show Completed" />
+      <Button layoutX="635.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#showAllPressed" text="Show All" />
+      <Button layoutX="308.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#completePressed" text="Complete Selected Item" />
+      <Button layoutX="818.0" layoutY="235.0" mnemonicParsing="false" text="Load List" />
+      <TextField fx:id="loadPath" layoutX="774.0" layoutY="284.0" promptText="Enter Path" />
+      <Button layoutX="800.0" layoutY="333.0" mnemonicParsing="false" text="Load Saved List" />
+      <TextField fx:id="savePath" layoutX="775.0" layoutY="422.0" promptText="Enter Path" />
+      <TextField fx:id="saveName" layoutX="775.0" layoutY="385.0" promptText="Enter name of File" />
+      <TableView fx:id="table" editable="true" layoutX="279.0" layoutY="171.0" prefHeight="349.0" prefWidth="470.0">
+        <columns>
+            <TableColumn fx:id="tableSelect" prefWidth="58.0" text="Select" />
+          <TableColumn fx:id="tableStatus" prefWidth="103.0" text="Status" />
+          <TableColumn fx:id="tableDueDate" onEditCommit="#dueDateEdit" prefWidth="83.0" text="Due Date" />
+            <TableColumn fx:id="tableDescription" onEditCommit="#descriptionEdit" prefWidth="225.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="555.0" layoutY="128.0" mnemonicParsing="false" onMousePressed="#clearListPressed" text="Clear List" />
+      <DatePicker fx:id="date" layoutX="55.0" layoutY="447.0" />
+      <TextArea fx:id="addDescription" layoutX="42.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0" promptText="Add Description" />
+      <Button layoutX="526.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#incompletePressed" text="Set Selected Item to Incomplete" />
+   </children>
+</Pane>
