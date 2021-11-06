@@ -32,36 +32,41 @@ class ApplicationControllerTest {
 
     @Test
     void dueDateEdit() {
-        //check to see if the data changed is the same as what's expected
+        //create an instance of RecordItem with the expected changed already made
+        //pass another instance without the changes through the function
+        //check to see if they are the same
     }
 
     @Test
     void descriptionEdit() {
-        //check to see if the data changed is the same as what's expected
+        //create an instance of the class Record Items where the Description is what is expected to change
+        //compare what is expected to change and what actually changes
     }
 
     @Test
     void completePressed() {
-        //check to see if the item is set to complete after the function is called
+        //create an instance where it is set to complete
+        // call the function and see if an instance of the class record items is changed to complete
     }
 
     @Test
     void showIncomplete() {
-        //check to see if the item is set to incomplete after the function is called
+        //create an instance where it is set to incomplete
+        // call the function and see if an instance of the class record items is changed to incomplete
     }
 
     @Test
     void showComplete() {
-        //check to see if the table view shows only the completed items
+        //check to see if the table view shows only the completed items after the function is called
     }
 
     @Test
     void showAllPressed() {
-        //check to see if the tableview shows all the items
+        //check to see if the tableview shows all the items after the function is called
     }
 
     @Test
     void incompletePressed() {
-        //check to see if the table view shows only the incomplete items
+        //check to see if the table view shows only the incomplete items after the function is called
     }
 }
