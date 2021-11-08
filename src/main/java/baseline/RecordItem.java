@@ -12,7 +12,7 @@ public class RecordItem {
     private String status;
     private CheckBox select;
     //defines instance variables
-    public RecordItem(String description, String dueDate, String complete) {
+    public RecordItem(String description,String dueDate ,String complete) {
         // sets instance variables to the method arguments
         this.description = description;
         this.dueDate = dueDate;

@@ -3,21 +3,28 @@ Application o-- ApplicationController
 ApplicationController o-- RecordItem
 class Application{
 +start(Stage stage)
-
 +main(String[] args)
 }
 class ApplicationController{
+-Text saveText;
+-Text loadText;
+-Text itemCounterText;
+-Text descriptionStatus;
+-Text dueDateStatus;
 -DatePicker date;
 -TableColumn<RecordItem, String> tableDescription;
 -TableColumn<RecordItem, String> tableDueDate;
 -TableColumn<RecordItem, String> tableStatus;
--TableColumn<RecordItem, String> tableSelect;
+-ableColumn<RecordItem, String> tableSelect;
 -TableView<RecordItem> table;
 -TextField saveName;
 -TextField savePath;
 -TextField loadPath;
 -TextArea addDescription;
--ObservableList<RecordItem> items = FXCollections.observableArrayList;
++ObservableList<RecordItem> items = FXCollections.observableArrayList();
+-String NOT_COMPLETE;
+-int counter;
+
 +addItemToListPressed(MouseEvent mouseEvent)
 +deleteItemPressed(MouseEvent mouseEvent)
 +clearListPressed(MouseEvent mouseEvent)
@@ -28,14 +35,16 @@ class ApplicationController{
 +showComplete(MouseEvent mouseEvent)
 +showAllPressed(MouseEvent mouseEvent)
 +incompletePressed(MouseEvent mouseEvent)
++loadListPressed()
++saveListPressed()
 +initialize()
 
 }
 class RecordItem{
- private String description;
- private String dueDate;
- private String status;
- private CheckBox select;
+-String description;
+-String dueDate;
+-String status;
+-CheckBox select;
 +RecordItem(String title, String description, String dueDate, boolean complete, boolean inView)
 +getTitle()
 +setTitle(String title)
