@@ -8,5 +8,5 @@ The three corresponding buttons can be found at the top of the page. there is a 
 to delete all values within the table. You can also save a list if you enter the path and the name of the file and click the
 save list button. If you wish to load a previous file you can type the path under the load list button and press the load 
 list button. if the paths for the load list or saved list are invalid you will be prompted by text. The last feature of this
-program is the sort feature. If the date table on the top of the table is clicked it will cycle through descending and ascending
+program is the sort feature. If the date label on the top of the table is clicked it will cycle through descending and ascending
 dates.
